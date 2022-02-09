@@ -1,7 +1,11 @@
-
-
-.movie-poster{
-    height: 20vh;
-    width: auto
+.movie-cards {
+  border: 1px solid red;
+  background-color: gray;
+  margin-bottom: 30px;
+  height: 300;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 

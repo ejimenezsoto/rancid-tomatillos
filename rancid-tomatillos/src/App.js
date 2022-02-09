@@ -10,7 +10,7 @@ class App extends Component {
       error: '',
     }
   }
-  
+
   componentDidMount = () => {
     return fetch('https://rancid-tomatillos.herokuapp.com/api/v2/movies')
       .then(res => res.json())
@@ -20,10 +20,10 @@ class App extends Component {
 
   render() {
     return (
-      <>
+      <main>
         <h1>Rancid Tomatillos</h1>
         < MovieContainer movies={this.state.movies}/>
-      </>
+      </main>
     )
   }
 }
