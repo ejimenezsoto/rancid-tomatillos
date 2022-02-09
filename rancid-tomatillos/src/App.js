@@ -10,23 +10,22 @@ class App extends Component {
       error: '',
     }
   }
+  
   componentDidMount = () => {
     return fetch('https://rancid-tomatillos.herokuapp.com/api/v2/movies')
-            .then(res => res.json())
-            .then(data => this.setState({movies: data.movies}))
-            .catch(error => this.setState({error: error}))
+      .then(res => res.json())
+      .then(data => this.setState({movies: data.movies}))
+      .catch(error => this.setState({error: error}))
   }
 
   render() {
     return (
-    
       <>
         <h1>Rancid Tomatillos</h1>
         < MovieContainer movies={this.state.movies}/>
       </>
-      )
+    )
   }
-  
 }
 
 export default App;
