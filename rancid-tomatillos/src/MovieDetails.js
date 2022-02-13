@@ -11,6 +11,7 @@ class MovieDetails extends Component {
   }
 
   componentDidMount = () => {
+    console.log(this.props.id)
     fetch(`https://rancid-tomatillos.herokuapp.com/api/v2/movies/${this.props.id}`)
       .then(data => data.json())
       .then(data => this.setState({movie: data.movie}))
@@ -19,7 +20,9 @@ class MovieDetails extends Component {
 
   render() {
     const movie = this.state.movie;
-    return()
+    return(
+      <h1>{movie}</h1>
+    )
   }
 }
 

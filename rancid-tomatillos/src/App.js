@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
-import MovieContainer from './MovieContainer';
 import { Route } from 'react-router-dom';
+import MovieContainer from './MovieContainer';
+import MovieDetails from './MovieDetails';
+import URLParams from './URLParams';
 import './App.css';
 
 class App extends Component {
@@ -16,7 +18,7 @@ class App extends Component {
     return fetch('https://rancid-tomatillos.herokuapp.com/api/v2/movies')
       .then(res => res.json())
       .then(data => this.setState({movies: data.movies}))
-      .catch(error => this.setState({error: error}))
+      .catch(err => this.setState({error: err}))
   }
 
   showMovieDetails =(id) => {
@@ -28,7 +30,12 @@ class App extends Component {
     return (
       <main>
         <h1>Rancid Tomatillos</h1>
-        < MovieContainer movies={this.state.movies}/>
+        <Route exact path="/">
+          < MovieContainer movies={this.state.movies}/>
+        </Route>
+        <Route path="/:id">
+          < MovieDetails id={<URLParams />}/>
+        </Route>
       </main>
     )
   }
