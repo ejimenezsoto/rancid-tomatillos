@@ -1,0 +1,48 @@
+.movie-details {
+    display: flex;
+    max-height: 100%;
+}
+
+.movie-background{
+    position: absolute;
+    max-height: 100%;
+    min-width: 100%;
+    z-index: -1;
+    opacity: .3;
+    margin: 0;
+}
+.movie-poster{
+    z-index: 1;
+    width: 219px;
+    height: 317px;
+}
+
+.movie-content{
+    margin: 15px 25px 0px 25px;
+    display: flex;
+
+    
+}
+
+.info{
+    margin-left: 25px;
+    background-color: #2e2d2d;
+    padding-left: 10px;
+    border-radius: 5px;
+    
+}
+
+.genres{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+}
+.genre-div{
+    padding-left: 5px;
+}
+
+.back-button{
+    margin-right: 20px;
+    
+}
