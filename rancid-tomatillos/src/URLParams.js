@@ -4,7 +4,6 @@ import MovieDetails from './MovieDetails';
 
 const URLParams = () => {
   const id = useParams().id;
-  console.log(id, 'yo')
 
   return (
     <MovieDetails id={id}/>
