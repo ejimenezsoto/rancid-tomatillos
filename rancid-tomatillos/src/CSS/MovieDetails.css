@@ -19,9 +19,7 @@
 
 .movie-content{
     margin: 15px 25px 0px 25px;
-    display: flex;
-
-    
+    display: flex;  
 }
 
 .info{
@@ -29,7 +27,6 @@
     background-color: #2e2d2d;
     padding-left: 10px;
     border-radius: 5px;
-    
 }
 
 .genres{
@@ -43,6 +40,13 @@
 }
 
 .back-button{
-    margin-right: 20px;
-    
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.back-button:hover {
+  transition: .2s;
+  transform: scale(1.2);
+  background-color: #E50914;
+  color: white;
 }
