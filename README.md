@@ -27,7 +27,7 @@ Project specs can be found here
 ### Future Iterations
 - Rate movies
 - Allow user to favorite movies and add to watch list
-- Use another api with a bigger databse of movies
+- Use another API with a bigger databse of movies
 
 
 ## Contributors
