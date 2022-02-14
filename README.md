@@ -2,7 +2,6 @@
 
 ### Mod3 2110 Paired Project
 
-
 ## Technologies
 - HTML
 - CSS
@@ -23,6 +22,13 @@
 ## Specs
 Project specs can be found here
 - [Rancid Tomatillos](https://frontend.turing.edu/projects/module-3/rancid-tomatillos-v3.html)
+
+## Additions
+### Future Iterations
+- Rate movies
+- Allow user to favorite movies and add to watch list
+- Use another api with a bigger databse of movies
+
 
 ## Contributors
 - [Brian Peterson](https://github.com/bpeterson2579)
