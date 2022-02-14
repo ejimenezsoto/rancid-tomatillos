@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Route, Switch } from 'react-router-dom';
 import MovieContainer from './MovieContainer';
 import MovieDetails from './MovieDetails';
+import SearchBar from './SearchBar';
 import URLParams from './URLParams';
 import './App.css';
 
@@ -10,6 +11,7 @@ class App extends Component {
     super();
     this.state = {
       movies: [],
+      filteredMovies: [],
       error: '',
     }
   }
@@ -17,19 +19,27 @@ class App extends Component {
   componentDidMount = () => {
     return fetch('https://rancid-tomatillos.herokuapp.com/api/v2/movies')
       .then(res => res.json())
-      .then(data => this.setState({movies: data.movies}))
+      .then(data => {
+        this.setState({movies: data.movies})
+        this.setState({filteredMovies: data.movies})
+        })
       .catch(err => this.setState({error: err}))
   }
 
-  showMovieDetails =(id) => {
-    const singleMovie = this.state.movies.find(movie => movie.id === id);
-    this.setState({movies: singleMovie})
+  searchMovies = (searchQuery) => {
+    const filteredMovies = this.state.filteredMovies.filter(movie => {
+      const lowerCaseMovie = movie.title.toLowerCase()
+      return lowerCaseMovie.includes(searchQuery)
+    })
+    this.setState({movies: filteredMovies})
+    
   }
 
   render() {
     return (
       <main>
         <h1>Rancid Tomatillos</h1>
+        <SearchBar searchMovies={this.searchMovies}/>
         <Switch>
           <Route exact path="/">
             < MovieContainer movies={this.state.movies}/>
