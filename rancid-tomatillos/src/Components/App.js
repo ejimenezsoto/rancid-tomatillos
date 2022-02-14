@@ -1,10 +1,9 @@
 import React, { Component } from 'react'
 import { Route, Switch } from 'react-router-dom';
 import MovieContainer from './MovieContainer';
-import MovieDetails from './MovieDetails';
 import SearchBar from './SearchBar';
 import URLParams from './URLParams';
-import './App.css';
+import '../CSS/App.css';
 
 class App extends Component {
   constructor(){

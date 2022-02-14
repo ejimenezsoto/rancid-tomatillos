@@ -1,6 +1,6 @@
 import React from "react";
 import MovieCard from "./MovieCard";
-import './MovieContainer.css';
+import '../CSS/MovieContainer.css';
 
 const MovieContainer = ({ movies, showMovieDetails }) => {
   

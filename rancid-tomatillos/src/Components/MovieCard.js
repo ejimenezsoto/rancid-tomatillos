@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from 'react-router-dom';
-import './MovieCard.css';
+import '../CSS/MovieCard.css';
 
 
 const MovieCard = ({ poster, title, id }) => {
