@@ -39,9 +39,9 @@ class App extends Component {
     return (
       <main>
         <h1>Rancid Tomatillos</h1>
-        <SearchBar searchMovies={this.searchMovies}/>
         <Switch>
           <Route exact path="/">
+            <SearchBar searchMovies={this.searchMovies}/>
             < MovieContainer movies={this.state.movies}/>
           </Route>
           <Route path="/:id">
