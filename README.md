@@ -2,7 +2,7 @@
 
 ### Mod3 2110 Paired Project
 
-## Abstract
+## Application Summary
 Rancid Tomatillos is a web app that will display the posters, title, and rating of a database of movies to a user. The user can then click on any of the posters to see additional details about that movie. There is also search bar for users to search to see if their favorite movie is included.
 
 ## Technologies
