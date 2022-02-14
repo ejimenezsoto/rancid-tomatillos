@@ -25,11 +25,6 @@ class MovieDetails extends Component {
     }
   }
 
-
-
-
-
-
   render() {
     const movie = this.state.movie;
 
