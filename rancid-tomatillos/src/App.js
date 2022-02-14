@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import MovieContainer from './MovieContainer';
 import MovieDetails from './MovieDetails';
 import URLParams from './URLParams';
@@ -30,12 +30,14 @@ class App extends Component {
     return (
       <main>
         <h1>Rancid Tomatillos</h1>
-        <Route exact path="/">
-          < MovieContainer movies={this.state.movies}/>
-        </Route>
-        <Route path="/:id">
-          < MovieDetails id={<URLParams />}/>
-        </Route>
+        <Switch>
+          <Route exact path="/">
+            < MovieContainer movies={this.state.movies}/>
+          </Route>
+          <Route path="/:id">
+            < URLParams/>
+          </Route>
+        </Switch>
       </main>
     )
   }
