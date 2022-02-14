@@ -35,11 +35,11 @@ describe('User flows in Rancid Tomatillos', () => {
 
   it('Should return to the main page when "Go Back" button is clicked', () => {
     cy.get('.movie-title')
-    .contains('Mulan')
-    .click()
-    .get('button')
-    .click()
-    .get('form')
-    .should('be.visible')
+      .contains('Mulan')
+      .click()
+      .get('button')
+      .click()
+      .get('form')
+      .should('be.visible')
   })
 });

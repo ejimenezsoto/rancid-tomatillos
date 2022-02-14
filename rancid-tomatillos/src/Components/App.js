@@ -38,15 +38,19 @@ class App extends Component {
     return (
       <main>
         <h1>Rancid Tomatillos</h1>
-        <Switch>
-          <Route exact path="/">
-            <SearchBar searchMovies={this.searchMovies}/>
-            < MovieContainer movies={this.state.movies}/>
-          </Route>
-          <Route path="/:id">
-            < URLParams/>
-          </Route>
-        </Switch>
+        <>
+          {this.state.error ? 
+          <h1>Something went wrong, try again later</h1> : 
+          <Switch>
+            <Route exact path="/">
+              <SearchBar searchMovies={this.searchMovies}/>
+              < MovieContainer movies={this.state.movies}/>
+            </Route>
+            <Route path="/:id">
+              < URLParams/>
+            </Route>
+          </Switch>}
+        </>
       </main>
     )
   }
