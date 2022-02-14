@@ -1,6 +1,6 @@
 # Rancid Tomatillos
 
-### Mod3 2111 Paired Project
+### Mod3 2110 Paired Project
 
 
 ## Technologies
